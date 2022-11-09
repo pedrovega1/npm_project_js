@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document1</title>
+    <link rel="stylesheet" href="/index.4717fcfd.css">
+    <style>@import "https://fonts.googleapis.com/css2?family=Oswald&family=Overpass:ital@0;1&display=swap";
+
+
+</style>
+    
+</head><body>
+
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg" style="background-color: azure">
+        <div class="container">
+            <img src="https://iconarchive.com/download/i103506/paomedia/small-n-flat/window-layout.ico" alt="" width="30" height="30">
+            <a class="navbar-brand" href="#">First_Project</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav "> <!-- d-flex -->
+            <ul class="navbar-nav px-2">
+              <li class="nav-item ">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item px-1">
+                <a class="nav-link" href="#">Skills</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="#">About me</a>
+              </li>
+              <li class="nav-item px-1">
+                <a class="nav-link" href="#">Contacts</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+<section class="2">
+<div class="posibilities">
+    <div class="container ">
+     <div class="title "> 
+      Hello, so good to see you!
+    </div>
+      <div class="subtitle">
+        I help small and medium-sized businesses grow their<br> audience and brand recognition through social media.
+      </div>
+     
+      <div class="row text-center ">
+        <div class="col-4">Image1
+
+        </div>
+        <div class="col-4">Image2
+
+        </div>
+        <div class="col-4">Image3
+
+        </div>
+      </div>
+      
+    </div>
+</div>
+</section>
+<div class="container px-5">
+  <div class="row gx-5">
+    <div class="col">
+     <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
+    </div>
+    <div class="col">
+      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
+    </div>
+  </div>
+</div>
+    
+
+
+<!-- JS JS JS JS JS JS -->
+
+<p class="lui">Player 1: Chris</p>
+<script>const para = document.querySelector("p");
+para.addEventListener("click", updateName);
+function updateName() {
+    let name = prompt("Enter a new name");
+    para.textContent = "Player 1: " + name;
+} // prompt- позволяет юзеру вводить текст
+
+</script>
+<!-- Угадай число -->
+
+<section class="3">
+  <div class="game">
+    <div class="container">
+      <h1>Number guessing game</h1>
+    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+    <div class="form">
+      <label for="guessField">Enter a guess: </label>
+      <input type="number" min="1" max="100" required="" id="guessField" class="guessField">
+      <input type="submit" value="Submit guess" class="guessSubmit">
+    </div>
+    <div class="resultParas">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
+
+    </div>
+  </div>
+  <script>var randomNumber = Math.floor(Math.random() * 100) + 1;
+var guesses = document.querySelector(".guesses");
+var lastResult = document.querySelector(".lastResult");
+var lowOrHi = document.querySelector(".lowOrHi");
+var guessSubmit = document.querySelector(".guessSubmit");
+var guessField = document.querySelector(".guessField");
+var guessCount = 1;
+var resetButton;
+function checkGuess() {
+    var userGuess = Number(guessField.value);
+    if (guessCount === 1) guesses.textContent = "Previous guesses: ";
+    guesses.textContent += userGuess + " ";
+    if (userGuess === randomNumber) {
+        lastResult.textContent = "Congratulations! You got it right!";
+        lastResult.style.backgroundColor = "green";
+        lowOrHi.textContent = "";
+        setGameOver();
+    } else if (guessCount === 10) {
+        lastResult.textContent = "!!!GAME OVER!!!";
+        setGameOver();
+    } else {
+        lastResult.textContent = "Wrong!";
+        lastResult.style.backgroundColor = "red";
+        if (userGuess < randomNumber) lowOrHi.textContent = "Last guess was too low!";
+        else if (userGuess > randomNumber) lowOrHi.textContent = "Last guess was too high!";
+    }
+    guessCount++;
+    guessField.value = "";
+    guessField.focus();
+}
+guessSubmit.addEventListener("click", checkGuess);
+function setGameOver() {
+    guessField.disabled = true;
+    guessSubmit.disabled = true;
+    resetButton = document.createElement("button");
+    resetButton.textContent = "Start new game";
+    document.body.appendChild(resetButton);
+    resetButton.addEventListener("click", resetGame);
+}
+function resetGame() {
+    guessCount = 1;
+    var resetParas = document.querySelectorAll(".resultParas p");
+    for(var i = 0; i < resetParas.length; i++)resetParas[i].textContent = "";
+    resetButton.parentNode.removeChild(resetButton);
+    guessField.disabled = false;
+    guessSubmit.disabled = false;
+    guessField.value = "";
+    guessField.focus();
+    lastResult.style.backgroundColor = "white";
+    randomNumber = Math.floor(Math.random() * 100) + 1;
+}
+
+</script>
+</section>
+
+    <script src="/index.e5ac7667.js" defer=""></script>
+
+</body>
+
+</html>
