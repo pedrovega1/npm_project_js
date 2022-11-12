@@ -12001,32 +12001,46 @@ body {
   font-family: Overpass, sans-serif;
 }
 
-.posibilities .container {
-  background: #cfdfc8;
+.calc {
+  width: 600px;
+  background-color: #11110f;
+  border: 2px solid #555;
+  border-radius: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 80px;
+  gap: 20px;
+  padding: 20px;
+  display: grid;
 }
 
-p {
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #0000c899;
-  cursor: pointer;
-  background: #0000c84d;
-  border: 2px solid #0000c899;
+.calc_result {
+  color: #000;
+  background-color: #ebfcfc;
+  grid-column: 1 / -1;
+  padding: 15px;
+  font-size: 45px;
+}
+
+.calc_btn {
+  background-color: #d3b716;
   border-radius: 10px;
-  padding: 3px 10px;
-  font-family: helvetica neue, helvetica, sans-serif;
-  display: inline-block;
-  box-shadow: 1px 1px 2px #0000c866;
+  font-size: 25px;
 }
 
-.form input[type="number"] {
-  width: 200px;
+.calc_btn:hover {
+  background-color: #62c7a5;
 }
 
-.lastResult {
-  color: #fff;
-  padding: 3px;
+.calc_btn_operator {
+  background-color: #2dbdff;
+}
+
+.calc_btn_reset {
+  background-color: red;
+}
+
+.calc_btn_equal {
+  background-color: #d55448;
 }
 
 /*# sourceMappingURL=index.4717fcfd.css.map */

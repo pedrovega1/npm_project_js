@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document1</title>
+    <title>Калькулятор</title>
     <link rel="stylesheet" href="/index.4717fcfd.css">
     <!-- указал путь к внеш.файлу js -->
     <script src="/index.4f492e9b.js"></script>
@@ -14,107 +14,36 @@
 </style>
     
 </head><body>
-
-<div class="container-fluid">
-    <nav class="navbar navbar-expand-lg" style="background-color: azure">
-        <div class="container">
-            <img src="https://iconarchive.com/download/i103506/paomedia/small-n-flat/window-layout.ico" alt="" width="30" height="30">
-            <a class="navbar-brand" href="#">First_Project</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav "> <!-- d-flex -->
-            <ul class="navbar-nav px-2">
-              <li class="nav-item ">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item px-1">
-                <a class="nav-link" href="#">Skills</a>
-              </li>
-              <li class="nav-item px-3">
-                <a class="nav-link" href="#">About me</a>
-              </li>
-              <li class="nav-item px-1">
-                <a class="nav-link" href="#">Contacts</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-
-<section class="2">
-<div class="posibilities">
-    <div class="container ">
-     <div class="title "> 
-      Hello, so good to see you!
-    </div>
-      <div class="subtitle">
-        I help small and medium-sized businesses grow their<br> audience and brand recognition through social media.
-      </div>
-     
-      <div class="row text-center ">
-        <div class="col-4">Image1
-
-        </div>
-        <div class="col-4">Image2
-
-        </div>
-        <div class="col-4">Image3
-
-        </div>
-      </div>
-      
-    </div>
-</div>
-</section>
-<div class="container px-5">
-  <div class="row gx-5">
-    <div class="col">
-     <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
-    </div>
-    <div class="col">
-      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
-    </div>
-  </div>
-</div>
     
+ <div class="calc">
+   
 
+    <output class="calc_result" id="result"></output>
+    <button type="button" class="calc_btn">7</button>
+    <button type="button" class="calc_btn">8</button>
+    <button type="button" class="calc_btn">9</button>
+    <button type="button" class="calc_btn calc_btn_operator">+</button>
 
-<!-- JS JS JS JS JS JS -->
+    <button type="button" class="calc_btn">4</button>
+    <button type="button" class="calc_btn">5</button>
+    <button type="button" class="calc_btn">6</button>
+    <button type="button" class="calc_btn calc_btn_operator">-</button>
 
-<p class="lui">Player 1: Chris</p>
-<script>const para = document.querySelector("p");
-para.addEventListener("click", updateName);
-function updateName() {
-    let name = prompt("Enter a new name");
-    para.textContent = "Player 1: " + name;
-} // prompt- позволяет юзеру вводить текст
+    <button type="button" class="calc_btn">1</button>
+    <button type="button" class="calc_btn">2</button>
+    <button type="button" class="calc_btn">3</button>
+    <button type="button" class="calc_btn calc_btn_operator">*</button>
 
-</script>
-<!-- Угадай число -->
+    <button type="button" class="calc_btn">0</button>
+    <button type="button" class="calc_btn">.</button>
+    <button type="button" class="calc_btn">00</button>
+    <button type="button" class="calc_btn calc_btn_operator">/</button>
 
-<section class="3">
-  <div class="game">
-    <div class="container">
-      <h1>Number guessing game</h1>
-    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
-    <div class="form">
-      <label for="guessField">Enter a guess: </label>
-      <input type="number" min="1" max="100" required="" id="guessField" class="guessField">
-      <input type="submit" value="Submit guess" class="guessSubmit">
-    </div>
-    <div class="resultParas">
-      <p class="guesses"></p>
-      <p class="lastResult"></p>
-      <p class="lowOrHi"></p>
-    </div>
+    <button type="button" class="calc_btn calc_btn_reset">C</button>
+    <button type="button" class="calc_btn calc_btn_equal">=</button>
 
-    </div>
-  </div>
-
-</section>
+   
+ </div>
 
     <script src="/index.e5ac7667.js" defer=""></script>
 
